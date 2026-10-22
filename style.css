@@ -1,0 +1,68 @@
+/* VOC Ltd. — 品牌配色取自 logo（藍 #1D94D2、深字 #221E1F），點綴使用義大利國旗色 */
+:root{
+  --blue:#1d94d2; --blue-dk:#12709f; --ink:#221e1f; --muted:#5f6a75;
+  --line:#e4e8ec; --bg:#f6f8fa; --card:#fff;
+  --it-green:#009246; --it-white:#f1f2f1; --it-red:#ce2b37;
+  --radius:12px; --maxw:960px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.85;
+  font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC","Noto Sans Thai","Sarabun","Leelawadee UI",system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--blue-dk);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* 義大利國旗細條 */
+.tricolore{height:5px;background:linear-gradient(90deg,var(--it-green) 0 33.33%,var(--it-white) 33.33% 66.66%,var(--it-red) 66.66% 100%)}
+
+header.site{background:var(--card);border-bottom:1px solid var(--line);padding:22px 0 20px}
+.head-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:150px;height:auto;display:block}
+.brand .name{font-size:15px;color:var(--muted);line-height:1.5}
+.brand .name b{display:block;font-size:19px;color:var(--ink);letter-spacing:.3px}
+
+/* 語系切換 */
+.langs{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--bg)}
+.langs a{font-size:13px;padding:5px 12px;border-radius:999px;color:var(--muted);white-space:nowrap}
+.langs a:hover{text-decoration:none;background:#fff;color:var(--ink)}
+.langs a[aria-current=page]{background:var(--blue);color:#fff;font-weight:600}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);border-bottom:1px solid var(--line);padding:54px 0 46px}
+.hero h1{margin:0 0 10px;font-size:34px;line-height:1.35;letter-spacing:.3px}
+.hero p.sub{margin:0 0 22px;font-size:18px;color:var(--muted);max-width:62ch}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--blue);color:var(--blue-dk);
+  border-radius:999px;font-size:13px;font-weight:600;background:#fff}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(180deg,var(--it-green) 0 33%,var(--it-white) 33% 66%,var(--it-red) 66%)}
+
+main{padding:44px 0 8px}
+section{margin-bottom:42px}
+h2{font-size:21px;margin:0 0 16px;padding-bottom:9px;border-bottom:2px solid var(--blue);display:inline-block}
+h2 .it{display:inline-block;width:26px;height:3px;vertical-align:middle;margin-right:9px;
+  background:linear-gradient(90deg,var(--it-green),var(--it-red))}
+p{margin:0 0 12px}
+ul{margin:0;padding-left:22px}
+li{margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+.card h3{margin:0 0 8px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+
+/* 聯絡 */
+.contact{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);
+  border-radius:var(--radius);padding:24px 26px}
+.contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px}
+.contact dt{color:var(--muted);font-size:14px}
+.contact dd{margin:0;font-size:17px;font-weight:600;word-break:break-all}
+
+footer.site{margin-top:26px;padding:26px 0 44px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);background:var(--card)}
+footer nav{margin-bottom:12px}
+footer nav a{margin-right:18px}
+.legal h2{font-size:24px}
+.legal h3{font-size:17px;margin:26px 0 8px;color:var(--blue-dk)}
+.legal h3:first-of-type{margin-top:0}
+@media(max-width:640px){.hero h1{font-size:26px}.hero p.sub{font-size:16px}.brand img{width:126px}
+  .contact dd{font-size:15px}.contact dl{grid-template-columns:1fr;gap:2px}}
